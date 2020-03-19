@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBE6D8"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:weightSum="1"
+        android:padding="10dp"
+        android:background="@drawable/header_back">
+        <ImageView
+            android:id="@+id/logoBaber"
+            android:background="@drawable/ic_launcher_bb"
+            android:layout_marginRight="5dp"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.1"/>
+        <EditText
+            android:id="@+id/search"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/logoBaber"
+            android:drawableLeft="@drawable/ic_caro"
+            android:background="@drawable/frame"
+            android:hint="cari nama campaign"
+            android:layout_marginRight="5dp"
+            android:drawablePadding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:singleLine="true"
+            android:textSize="12sp"
+            android:layout_weight="0.9"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lblJudulCampaign"/>
+        <!--<ImageView
+            android:id="@+id/favorit"
+            android:layout_toRightOf="@+id/search"
+            android:background="@drawable/starwhite"
+            android:layout_marginRight="5dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.09"/>
+        <ImageView
+            android:id="@+id/notif"
+            android:layout_toRightOf="@+id/favorit"
+            android:background="@drawable/loncengputih"
+            android:layout_marginRight="5dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.09"/>-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_weight="3"
+        android:layout_height="0dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_indicator"/>
+
+        <LinearLayout
+            android:id="@+id/pagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/header_fitur"
+        android:padding="6dp"
+        android:layout_weight="1.3"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="0dp">
+
+                    <ImageButton
+                        android:id="@+id/donasi"
+                        android:src="@drawable/icon_donasi"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitXY"
+                        android:onClick="goToDondasiCampaign"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="Donasi"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/lblIdGoogle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:id="@+id/lblUserDisplay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:id="@+id/lblUserEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"/>
+                    </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="0dp">
+            <ImageButton
+                android:id="@+id/zakat"
+                android:src="@drawable/icon_zakat"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:onClick="goToMenuZakat"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Zakat"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/wakaf"
+                android:src="@drawable/icon_wakaf"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:onClick="goToMenuWakaf"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Wakaf"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Column 1 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/imsakiyah"
+                android:src="@drawable/icon_imsakiyah"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:onClick="goToImsakiyah"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Qurban"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/lainnya"
+                android:src="@drawable/icon_lainnya"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:onClick="goToPopup"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Lainnya"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.9"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <android.support.v7.widget.RecyclerView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recyclerTemp"
+        android:scrollbars="vertical"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_weight="0.8"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#ffffff"
+        android:padding="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_berandahijau"
+                android:id="@+id/iconBeranda"/>
+            <TextView
+                android:id="@+id/txtberanda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Beranda"
+                android:textColor="#000"/>
+        </LinearLayout>
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:onClick="goToCampaigner"
+                android:src="@drawable/ic_add_campaigner_black_24dp"
+                android:id="@+id/iconCampaigner"/>
+            <TextView
+                android:id="@+id/txtCampaigner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Galang Dana"
+                android:textColor="#000"/>
+        </LinearLayout>-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_faq"
+                android:onClick="goToFaq"
+                android:id="@+id/iconFaq"/>
+            <TextView
+                android:id="@+id/txtFaq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FAQ"
+                android:textColor="#000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_profile"
+                android:onClick="goToProfile"
+                android:id="@+id/iconProfile"/>
+            <TextView
+                android:id="@+id/txtProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="#000"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

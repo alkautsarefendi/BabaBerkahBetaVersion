@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/terpopuler"
+        android:title="Terpopuler"
+        android:icon="@drawable/ic_new_releases_red_24dp"/>
+    <item
+        android:id="@+id/ascending"
+        android:title="Lama - > Baru"
+        android:icon="@drawable/ascending_filter"/>
+    <item
+        android:id="@+id/descending"
+        android:title="Baru - > Lama"
+        android:icon="@drawable/descending_filter"/>
+</menu>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pendidikan"
+        android:title="Pendidikan"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/kesehatan"
+        android:title="Kesehatan"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/sosial"
+        android:title="Sosial"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/bencana"
+        android:title="Bencana Alam"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/lingkungan"
+        android:title="Lingkungan"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/ekonomi"
+        android:title="Ekonomi"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/keagamaan"
+        android:title="Keagamaan"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/lainlain"
+        android:title="Lain-Lain"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/kurban"
+        android:title="Kurban"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/bangunMasjid"
+        android:title="Bangun Masjid"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/bedahRumah"
+        android:title="Bedah Rumah"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/benahSekolah"
+        android:title="Benah Sekolah"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/biayaPengobatan"
+        android:title="Biaya Pengobatan"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/pesantren"
+        android:title="Pesantren"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/film"
+        android:title="Film"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/umum"
+        android:title="Umum"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <item
+        android:id="@+id/yatim"
+        android:title="Yatim"
+        android:icon="@drawable/ic_radio_button_unchecked_black_24dp"/>
+</menu>

@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <ScrollView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/transSinopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/lblsinopsis"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sinopsis"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/lblDetail"
+            android:layout_below="@+id/lblsinopsis"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Detail Campaign"
+            android:textColor="#000000"
+            android:textSize="12sp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

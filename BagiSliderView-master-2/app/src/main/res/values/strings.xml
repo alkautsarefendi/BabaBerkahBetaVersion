@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Bagi Slider View</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">603965929991414</string>
+    <string-array name="array_zakat">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="array_kategori">
+        <item>Pendidikan</item>
+        <item>Kesehatan</item>
+        <item>Sosial</item>
+        <item>Bencana Alam</item>
+        <item>Lingkungan</item>
+        <item>Pemberdayaan Ekonomi</item>
+        <item>Keagamaan</item>
+        <item>Wakaf</item>
+        <item>Lain-lain</item>
+        <item>Kurban</item>
+        <item>Bangun Masjid</item>
+        <item>Bedah Rumah</item>
+        <item>Benah Sekolah</item>
+        <item>Biaya Pengobatan</item>
+        <item>Pesantren</item>
+        <item>Film</item>
+        <item>Umum</item>
+        <item>Fitrah</item>
+        <item>Yatim</item>
+        <item>Zakat</item>
+        <item>Wakaf</item>
+    </string-array>
+    <string-array name="array_Donasi">
+        <item>Pendidikan</item>
+        <item>Kesehatan</item>
+        <item>Sosial</item>
+        <item>Bencana Alam</item>
+        <item>Lingkungan</item>
+        <item>Pemberdayaan Ekonomi</item>
+        <item>Keagamaan</item>
+        <item>Lain-lain</item>
+        <item>Kurban</item>
+        <item>Bangun Masjid</item>
+        <item>Bedah Rumah</item>
+        <item>Benah Sekolah</item>
+        <item>Biaya Pengobatan</item>
+        <item>Pesantren</item>
+        <item>Film</item>
+        <item>Umum</item>
+        <item>Fitrah</item>
+        <item>Yatim</item>
+    </string-array>
+    <string-array name="array_zona">
+        <item>Aceh</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Bengkulu</item>
+        <item>Sumatera Selatan</item>
+        <item>Kepulauan Bangka Belitung</item>
+        <item>Lampung</item>
+        <item>Banten</item>
+        <item>Jawa Barat</item>
+        <item>DKI Jakarta</item>
+        <item>Jawa Tengah</item>
+        <item>DI Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Timur</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Maluku Utara</item>
+        <item>Maluku</item>
+        <item>Papua Barat</item>
+        <item>Papua</item>
+    </string-array>
+</resources>

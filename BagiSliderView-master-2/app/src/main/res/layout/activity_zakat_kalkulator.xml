@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBE6D8"
+    android:orientation="vertical"
+    tools:context=".fitur_zakat">
+
+    <LinearLayout
+        android:background="@drawable/header_back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnBack"
+            android:background="@drawable/arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/txtHeader"
+            android:gravity="center"
+            android:text="Kalkulator Zakat"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginTop="5dp"
+        android:text="Penghasilan per Bulan"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/jumlahPenghasilan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblhandphone"
+        android:layout_marginTop="5sp"
+        android:background="@drawable/frame_dana"
+        android:inputType="number"
+        android:text="0"
+        android:maxLength="19"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginTop="5dp"
+        android:text="Bonus Pendapatan dan Lain-lain (per Bulan)"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/jumlahPendapatanLain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblhandphone"
+        android:layout_marginTop="5sp"
+        android:background="@drawable/frame_dana"
+        android:inputType="number"
+        android:maxLength="19"
+        android:padding="10dp"
+        android:text="0"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginTop="5dp"
+        android:text="Pengeluaran Pokok (termasuk hutang jatuh tempo) per Bulan"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/jumlahPengeluaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblhandphone"
+        android:layout_marginTop="5sp"
+        android:background="@drawable/frame_dana"
+        android:inputType="number"
+        android:maxLength="19"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:text="0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginTop="5dp"
+        android:text="Jumlah Zakat Penghasilan per Bulan"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/jumlahZakatPerbulan"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblhandphone"
+            android:layout_marginTop="5sp"
+            android:background="@drawable/frame_dana"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:text="0"
+            android:focusable="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btnHitung"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="35dp"
+            android:onClick="hitungZakat"
+            android:background="@drawable/tombol_donasi"
+            android:textColor="#ffffff"
+            android:text="Hitung"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginTop="5dp"
+        android:text="Jumlah Zakat Penghasilan per Tahun"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <EditText
+            android:id="@+id/jumlahZakatPertahun"
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblhandphone"
+            android:layout_marginTop="5sp"
+            android:background="@drawable/frame_dana"
+            android:focusable="false"
+            android:inputType="number"
+            android:padding="10dp"
+            android:text="0"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btnBersih"
+            android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:layout_height="35dp"
+            android:onClick="clearText"
+            android:background="@drawable/tombol_donasi"
+            android:textColor="#ffffff"
+            android:text="Bersih"/>
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/btnZakat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tombol_donasi"
+        android:textColor="#ffffff"
+        android:onClick="bayarZakat"
+        android:text="Zakat Sekarang"/>
+
+</LinearLayout>

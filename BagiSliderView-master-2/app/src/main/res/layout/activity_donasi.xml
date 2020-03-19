@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBE6D8"
+    android:orientation="vertical"
+    tools:context="org.bawaberkah.app.donasi">
+
+    <LinearLayout
+        android:background="@drawable/header_back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnBack"
+            android:background="@drawable/arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/txtHeader"
+            android:gravity="center"
+            android:text="Donasi"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutdonasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_donasinew"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <EditText
+                    android:id="@+id/txtJumlah"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/donasi"
+                    android:drawableLeft="@drawable/ic_logotransferan_rp"
+                    android:drawablePadding="10dp"
+                    android:gravity="fill"
+                    android:hint="Jumlah"
+                    android:inputType="number"
+                    android:maxLength="19"
+                    android:paddingLeft="10dp"
+                    android:textColor="#00B518"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutLogin"
+                android:padding="18dp"
+                android:layout_marginTop="100dp"
+                android:orientation="vertical">
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:colorScheme="dark"/>
+
+                <Button
+                    android:id="@+id/log_out"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tombol_signout"
+                    android:text="Sign out Google Account"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/layoutLogin"
+                android:id="@+id/lineIsiForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="atau isi form donasi"
+                    android:textColor="#000000"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toLeftOf="@id/tvText"
+                    android:background="#000000"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/tvText"
+                    android:background="#000000"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutnama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineIsiForm"
+                android:padding="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/lblNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Nama" />
+
+                <EditText
+                    android:id="@+id/txtNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblNama"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/frame_dana"
+                    android:hint="Nama Lengkap"
+                    android:maxLength="50"
+                    android:padding="10dp"
+                    android:focusable="false"
+                    android:textSize="12sp" />
+
+                <CheckBox
+                    android:id="@+id/chkanonim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtNama"
+                    android:onClick="changeAnonim"
+                    android:textSize="10sp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="italic"
+                    android:visibility="gone"
+                    android:text="berdonasi sebagai Anonim" />
+
+                <TextView
+                    android:id="@+id/lblemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chkanonim"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    android:text="E-mail" />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblemail"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/frame_dana"
+                    android:hint="E-mail"
+                    android:maxLength="50"
+                    android:padding="10dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/lblhandphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtEmail"
+                    android:layout_marginTop="5dp"
+                    android:text="No. Handphone"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/txthandphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblhandphone"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/frame_dana"
+                    android:hint="No Handphone"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:padding="10dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/lblpesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txthandphone"
+                    android:layout_marginTop="5dp"
+                    android:text="Pesan"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/txtpesan"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/lblpesan"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/frame_dana"
+                    android:gravity="top"
+                    android:hint="Tuliskan Pesan Baikmu"
+                    android:maxLength="100"
+                    android:padding="10dp"
+                    android:singleLine="false"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/lblmetodepembayaran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtpesan"
+                    android:layout_marginTop="20dp"
+                    android:text="Metode Pembayaran :"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblIdCampaign"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/txtpesan"
+                    android:layout_marginTop="20dp"
+                    android:text="Metode Pembayaran :"
+                    android:textColor="#000000"
+                    android:textSize="0sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblmetodepembayaran"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/metDana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lblmetode"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:checked="false"
+                        android:drawableRight="@drawable/logodana1"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="DANA"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/metOvo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metDana"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/logoovo4"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="OVO"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/metGopay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metOvo"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/logo_gopay"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="GO-Pay"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/metBca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metGopay"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/ic_bankbca47"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="Bank Central Asia (BCA)" />
+
+                    <RadioButton
+                        android:id="@+id/metMandiri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metBca"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/ic_logobankmandiri50"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="Bank Mandiri" />
+
+                    <RadioButton
+                        android:id="@+id/metBni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metMandiri"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/ic_logobnisyariah38"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="BNI Syariah" />
+
+                    <RadioButton
+                        android:id="@+id/metBri"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metBni"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/ic_logobri64"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="Bank Rakyat Indonesia" />
+
+                    <RadioButton
+                        android:id="@+id/metAlfa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metBri"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/logoalfamart1"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="Bayar di Gerai (Alfa Grup)"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/metVirtual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/metAlfa"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/pembayaran"
+                        android:drawableRight="@drawable/ic_virtual24"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:text="Virtual Account"
+                        android:visibility="gone" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/lblVoucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup"
+                    android:layout_marginTop="20dp"
+                    android:text="Voucher dan Kode Voucher"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/txtVoucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/lblVoucher"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/frame_dana"
+                    android:drawableLeft="@drawable/logotrx1"
+                    android:drawableRight="@drawable/logoplus1"
+                    android:drawablePadding="10dp"
+                    android:hint="Masukkan Kode Voucher Disini"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnDonasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtVoucher"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/tombol_donasi"
+                    android:text="LANJUT"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lblMetode"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/btnDonasi"
+                    android:layout_marginTop="0dp" />
+                <TextView
+                    android:id="@+id/lblIdGoogle"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/btnDonasi"
+                    android:layout_marginTop="0dp" />
+                <TextView
+                    android:id="@+id/lblDanaTerkumpul"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/btnDonasi"
+                    android:layout_marginTop="0dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

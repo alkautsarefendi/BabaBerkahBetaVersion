@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/labelDonatur"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Donatur : "/>
+    <TextView
+        android:id="@+id/lblDonatur"
+        android:text="Nama Donatur"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_toRightOf="@+id/labelDonatur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/labelNominal"
+        android:layout_below="@+id/labelDonatur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Nominal : "/>
+    <TextView
+        android:id="@+id/lblNominal"
+        android:layout_below="@+id/lblDonatur"
+        android:layout_toRightOf="@+id/labelNominal"
+        android:text="Rp 500.000"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/labelCatatan"
+        android:layout_below="@+id/labelNominal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Catatan : "/>
+    <TextView
+        android:id="@+id/lblCatatan"
+        android:layout_below="@+id/lblNominal"
+        android:layout_toRightOf="@+id/labelCatatan"
+        android:text="Catatan :"
+        android:textStyle="italic"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/lblId"
+        android:textStyle="italic"
+        android:textSize="0sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+</RelativeLayout>

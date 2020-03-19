@@ -1,0 +1,4 @@
+#Thu Jun 13 01:32:17 WIB 2019
+base.0=/Users/tyo/Downloads/BagiSliderView-master-2/app/build/intermediates/dex/release/mergeDexRelease/out
+path.0=classes.dex
+renamed.0=classes.dex

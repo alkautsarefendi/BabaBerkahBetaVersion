@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/splash_screen"
+    android:background="@drawable/splash_background_only2"
+    android:weightSum="10">
+    <!--<com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImageView"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />-->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="70dp"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:background="@drawable/logo_icon_baber" />
+    <ImageView
+        android:id="@id/logoBaber"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_centerVertical="true"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/logo_baber_label" />
+    <ImageView
+        android:id="@+id/tagBaber"
+        android:layout_below="@+id/logo"
+        android:layout_marginLeft="210dp"
+        android:layout_centerVertical="true"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:background="@drawable/logo_tag_baber" />
+
+    <TextView
+        android:id="@+id/lblversi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:text="v 1.1.6"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+</RelativeLayout>

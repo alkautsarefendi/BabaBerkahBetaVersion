@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Fri Jun 14 04:00:47 WIB 2019
+0.baseType=DIRECTORY
+0.base=/Users/tyo/Downloads/BagiSliderView-master-2/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+0.path=splash_screen_bb.gif
+0.set=ASSET
+count=1
